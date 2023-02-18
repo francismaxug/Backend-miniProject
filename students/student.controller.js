@@ -25,6 +25,11 @@ async function findStudent(req, res, next) {
 async function createStudent(req, res, next) {
   try {
     const data = req.body;
+    const exist = await Student.findOne({ studentId:data.studentId }).exec();
+    if(exist){
+      return res.status(400).json({message:"Student with id already exist"})
+    }
+
     let newStudent = new Student(data);
     const saved = await newStudent.save();
     res.json({ message: "Student created" ,studentId:saved.studentId});
