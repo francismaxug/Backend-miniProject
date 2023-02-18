@@ -10,7 +10,7 @@ const { createStudentSchema } = require("./student.schema");
 const studentRouter = new Router();
 
 studentRouter.get("/", getStudents);
-studentRouter.get("/:studentId", findStudent);
+studentRouter.get("/:name", findStudent);
 
 studentRouter.post("/", validateResource(createStudentSchema), createStudent);
 
