@@ -11,8 +11,8 @@ async function getStudents(req, res, next) {
 
 async function findStudent(req, res, next) {
   try {
-    const { studentId } = req.params;
-    const student = await Student.findOne({ studentId }).exec();
+    const { name } = req.params;
+    const student = await Student.findOne({ name }).exec();
     if (!student) {
       return res.status(404).json({ message: "Student not found" });
     }
