@@ -1,7 +1,7 @@
 # Student Portal
 
 Student portal API hosted on Vercel.  
-[Vercel URL](https://francismax-student-portal.vercel.app)
+[Vercel URL](https://francismax-student-portal.vercel.app/api/students)
 
 ## Tools & Frameworks
 - Expressjs
