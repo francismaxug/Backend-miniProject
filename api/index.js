@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/", appRouter);
+app.use("/api", appRouter);
 
 app.use(function (err, req, res, next) {
   console.error(err.stack);
