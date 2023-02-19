@@ -8,7 +8,7 @@ const createStudentSchema = yup.object({
     .oneOf(["100", "200", "300", "400", "500", "600"])
     .required(),
   programme: yup.string().required(),
-  hall: yup.string().optional(),
+  hall: yup.string().optional().required()
 });
 
 module.exports = { createStudentSchema };
